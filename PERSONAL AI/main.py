@@ -30,7 +30,7 @@ def wishMe():
     else:
         speak("Good Evening!")
 
-    speak("I am BIRD. your personal AI assistance . Please tell me how may I help you")
+    speak(" hello SAHIL sir, I am BIRD, how may i help you ")
 
 def takeCommand():
     #It takes microphone input from the user and returns string output
@@ -81,12 +81,15 @@ if __name__ == "__main__":
         elif 'open google' in query:
             webbrowser.open("google.com")
 
+        elif 'play my music' in query:
+            webbrowser.open("https://wynk.in/music")
+
         elif 'open stackoverflow' in query:
             webbrowser.open("stackoverflow.com")
 
 
         elif 'play music' in query:
-            music_dir = 'D:\\Non Critical\\songs\\Favorite Songs2'
+            music_dir = 'https://wynk.in/music'
             songs = os.listdir(music_dir)
             print(songs)
             os.startfile(os.path.join(music_dir, songs[0]))
@@ -96,7 +99,7 @@ if __name__ == "__main__":
             speak(f"Sir, the time is {strTime}")
 
         elif 'open code' in query:
-            codePath = "C:\\Users\\Haris\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"
+            codePath = ""
             os.startfile(codePath)
 
         elif 'email to sahil' in query:
@@ -109,3 +112,5 @@ if __name__ == "__main__":
             except Exception as e:
                 print(e)
                 speak("Sorry sahil sir. I am not able to send this email")
+
+
